@@ -1,2 +1,5 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Sun Dec 03 16:32:09 GMT 2023","Sun Dec 03 16:32:11 GMT 2023","1680","test","all_test","TestAll","","","City selection window is opened","Ожидаем что на странице с поиском вокансий, отображается окно выбора города"
+"passed","Sun Dec 03 22:31:32 GMT 2023","Sun Dec 03 22:31:34 GMT 2023","2343","test","all_test","TestAll","","","First icon auto is clickable","Ожидаем что первая иконка с машиной - кликабельна"
+"passed","Sun Dec 03 22:31:28 GMT 2023","Sun Dec 03 22:31:31 GMT 2023","2186","test","all_test","TestAll","","","BMW logo is clickable","Ожидаем что логотип BMW - кликабельный"
+"passed","Sun Dec 03 22:31:23 GMT 2023","Sun Dec 03 22:31:28 GMT 2023","4526","test","all_test","TestAll","","","Logo BMW is visible","Ожидаем что на странице отображается логотип компании BMW"
+"passed","Sun Dec 03 22:31:35 GMT 2023","Sun Dec 03 22:31:40 GMT 2023","5701","test","all_test","TestAll","","","Car preview after click","Ожидаем что после коика на иконку, отображается превью модели машины"
