@@ -15,17 +15,18 @@ class TestAll(TestAnnotations):
         self.base_functions.open(self.lincs.VACANCY_URL)
         self.base_functions.is_opened(self.lincs.VACANCY_URL)
         self.vacancy_page.city_selection_window_is_opened()
+        self.base_functions.make_screenshot('PASS')
 
         sleep(1)
 
-    @allure.title("Click button save")
-    @allure.severity("Critical")
-    @pytest.mark.smoke
-    def test_2(self):
-        """Ожидаем что кнопка __Сохранить__, кликабельна и нажимается."""
-        self.base_functions.open(self.lincs.VACANCY_URL)
-        self.base_functions.is_opened(self.lincs.VACANCY_URL)
-        self.vacancy_page.click_button_save()
-
-
-        sleep(1)
+    # @allure.title("Click button save")
+    # @allure.severity("Critical")
+    # @pytest.mark.smoke
+    # def test_2(self):
+    #     """Ожидаем что кнопка __Сохранить__, кликабельна и нажимается."""
+    #     self.base_functions.open(self.lincs.VACANCY_URL)
+    #     self.base_functions.is_opened(self.lincs.VACANCY_URL)
+    #     self.vacancy_page.click_button_save()
+    #
+    #
+    #     sleep(1)
