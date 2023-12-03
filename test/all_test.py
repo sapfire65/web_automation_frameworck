@@ -7,26 +7,38 @@ from time import sleep
 @allure.feature("Profile Functionality")
 class TestAll(TestAnnotations):
 
-    @allure.title("City selection window is opened")
+    @allure.title("Logo BMW is visible")
     @allure.severity("Critical")
     @pytest.mark.smoke
-    def test_1(self):
-        """Ожидаем что на странице с поиском вокансий, отображается окно выбора города"""
-        self.base_functions.open(self.lincs.VACANCY_URL)
-        self.base_functions.is_opened(self.lincs.VACANCY_URL)
-        # self.vacancy_page.city_selection_window_is_opened()
-        self.base_functions.make_screenshot('PASSED')
+    def test_logo_bmw_is_visible(self):
+        """Ожидаем что на странице отображается логотип компании BMW"""
+        self.base_functions.open(self.lincs.ALL_MODELS)
+        self.base_functions.is_opened(self.lincs.ALL_MODELS)
+        self.all_models_page.logo_is_visible()
 
-        sleep(1)
+    @allure.title("BMW logo is clickable")
+    @allure.severity("Critical")
+    @pytest.mark.smoke
+    def test_logo_bmw_is_clickable(self):
+        """Ожидаем что логотип BMW - кликабельный"""
+        self.base_functions.open(self.lincs.ALL_MODELS)
+        self.base_functions.is_opened(self.lincs.ALL_MODELS)
+        self.all_models_page.logo_is_clickable()
 
-    # @allure.title("Click button save")
-    # @allure.severity("Critical")
-    # @pytest.mark.smoke
-    # def test_2(self):
-    #     """Ожидаем что кнопка __Сохранить__, кликабельна и нажимается."""
-    #     self.base_functions.open(self.lincs.VACANCY_URL)
-    #     self.base_functions.is_opened(self.lincs.VACANCY_URL)
-    #     self.vacancy_page.click_button_save()
-    #
-    #
-    #     sleep(1)
+    @allure.title("First icon auto is clickable")
+    @allure.severity("Critical")
+    @pytest.mark.smoke
+    def test_first_auto_is_klickable(self):
+        """Ожидаем что первая иконка с машиной - кликабельна"""
+        self.base_functions.open(self.lincs.ALL_MODELS)
+        self.base_functions.is_opened(self.lincs.ALL_MODELS)
+        self.all_models_page.first_auto_is_klickable()
+
+    @allure.title("Car preview after click")
+    @allure.severity("Critical")
+    @pytest.mark.smoke
+    def test_car_preview_after_click(self):
+        """Ожидаем что после коика на иконку, отображается превью модели машины"""
+        self.base_functions.open(self.lincs.ALL_MODELS)
+        self.base_functions.is_opened(self.lincs.ALL_MODELS)
+        self.all_models_page.car_preview_after_click()

@@ -1,7 +1,7 @@
 class Links:
 
-    HOST = "https://job.ozon.ru"
-    JOB_URL = f"{HOST}/events/33"
-    VACANCY_URL = f"{HOST}/vacancy/"
+    HOST = "https://www.bmw.ru"
+    ALL_MODELS = f"{HOST}/ru/all-models.html"
+
     # LOGIN_PAGE = f"{HOST}/auth/login"
     # DASHBOARD_PAGE = f"{HOST}/dashboard/index"

@@ -1,13 +1,13 @@
 import pytest
 from base.base_functions import Base
-from page.vacancy_page import VacancyPage
+from page.all_models_page import AllModels
 from config.lincs import Links
 
 
 class TestAnnotations:
 
     base_functions = Base
-    vacancy_page = VacancyPage
+    all_models_page = AllModels
     lincs = Links
 
 
@@ -16,5 +16,5 @@ class TestAnnotations:
 
         request.cls.driver = driver
         request.cls.base_functions = Base(driver)
-        request.cls.vacancy_page = VacancyPage(driver)
+        request.cls.all_models_page = AllModels(driver)
         request.cls.lincs = Links()

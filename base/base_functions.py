@@ -1,8 +1,11 @@
 import allure
+import io
+from PIL import Image, ImageDraw
 from allure_commons.types import AttachmentType
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.remote.webdriver import WebDriver
+
 from config.lincs import Links
 
 class Base:
@@ -42,12 +45,40 @@ class Base:
         self.element_is_clickable(locator).click()
 
 
-    def make_screenshot(self, screen_name):
+    def make_screenshot(self, screen_name, element_selector):
+        # Получение скриншота страницы
+        screenshot = self.driver.get_screenshot_as_png()
+
+        # Открытие скриншота с использованием Pillow
+        image = Image.open(io.BytesIO(screenshot))
+        draw = ImageDraw.Draw(image)
+
+        # Получение элемента для выделения рамкой
+        element = self.element_is_visible(element_selector)
+        element_location = element.location
+        element_size = element.size
+
+        # Отрисовка рамки вокруг элемента
+        draw.rectangle(
+            [
+                (element_location['x'], element_location['y']),
+                (element_location['x'] + element_size['width'], element_location['y'] + element_size['height'])
+            ],
+            outline="green",  # Цвет рамки (красный)
+            width=5  # Ширина рамки
+        )
+
+        # Сохранение отредактированного изображения
+        screenshot = io.BytesIO()
+        image.save(screenshot, format='PNG')
+
         allure.attach(
-            body=self.driver.get_screenshot_as_png(),
-            name=screen_name,
+            body=screenshot.getvalue(),
+            name=f"{screen_name}",
             attachment_type=AttachmentType.PNG
         )
+
+
 
 
 
