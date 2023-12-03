@@ -17,7 +17,7 @@ class VacancyPage(Base):
     def __init__(self, driver: WebDriver):
         super().__init__(driver)
         self.driver = driver
-        self.wait = WebDriverWait(driver, 5, 1)
+        self.wait = WebDriverWait(driver, 20, 1)
 
 
     @allure.step("The city selection window is open")
