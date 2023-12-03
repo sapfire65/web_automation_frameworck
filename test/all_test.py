@@ -15,7 +15,7 @@ class TestAll(TestAnnotations):
         self.base_functions.open(self.lincs.VACANCY_URL)
         self.base_functions.is_opened(self.lincs.VACANCY_URL)
         self.vacancy_page.city_selection_window_is_opened()
-        self.base_functions.make_screenshot('PASS')
+        self.base_functions.make_screenshot('PASSED')
 
         sleep(1)
 

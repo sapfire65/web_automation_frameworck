@@ -21,6 +21,7 @@ def driver(request):
     chrome_options.add_argument("--disable-extensions")
     chrome_options.add_argument("--homedir=/tmp")
     # chrome_options.add_argument('log-level=1')
+    chrome_options.add_argument('--incognito')
     chrome_options.add_argument('--headless')
 
     driver = webdriver.Chrome(options=chrome_options)

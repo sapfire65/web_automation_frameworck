@@ -12,7 +12,7 @@ class VacancyPage(Base):
 
     LIST_CITY = ('xpath', '//div[@class="select__trigger has-value"]')
     BUTTON_SAVE = ('xpath', '(//button[@type="button"])[1]')
-    FRAME = ('xpath', '//div[@class="modal__content"]')
+    POP_UP = ('xpath', '//div[@class="modal__content"]')
 
     def __init__(self, driver: WebDriver):
         super().__init__(driver)
@@ -22,7 +22,7 @@ class VacancyPage(Base):
 
     @allure.step("The city selection window is open")
     def city_selection_window_is_opened(self):
-        self.element_is_visible(self.FRAME)
+        self.element_is_visible(self.POP_UP)
 
     @allure.step("Click button SAVE for city")
     def click_button_save(self):
