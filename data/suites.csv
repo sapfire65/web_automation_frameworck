@@ -1,2 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Sun Dec 03 16:29:10 GMT 2023","Sun Dec 03 16:29:11 GMT 2023","1595","test","all_test","TestAll","","","City selection window is opened","Ожидаем что на странице с поиском вокансий, отображается окно выбора города"
+"passed","Sun Dec 03 16:32:09 GMT 2023","Sun Dec 03 16:32:11 GMT 2023","1680","test","all_test","TestAll","","","City selection window is opened","Ожидаем что на странице с поиском вокансий, отображается окно выбора города"
