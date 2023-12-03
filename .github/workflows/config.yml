@@ -1,7 +1,9 @@
   name: functional UI tests
 
 
-  on: workflow_dispatch
+  on:
+    push:
+    workflow_dispatch:
 
   jobs:
     ui-tests:
