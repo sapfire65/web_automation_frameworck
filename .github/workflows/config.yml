@@ -52,7 +52,15 @@
           run: |
             sudo cp -R allure-report/history/* ./.github/gh-pages/history/
 
+        
 
+        - name: Delete workflow runs
+          uses: Mattraks/delete-workflow-runs@v2
+          with:
+            token: ${{ secrets.CI_TOKEN }}
+            repository: ${{ 'sapfire65/web_automation_frameworck' }}
+            retain_days: 0
+            keep_minimum_runs: 6
 
         - name: Deploy to GitHub Pages
           uses: JamesIves/github-pages-deploy-action@4.1.5
@@ -62,10 +70,3 @@
             folder: allure-report
             clean: true
 
-        - name: Delete workflow runs
-          uses: Mattraks/delete-workflow-runs@v2
-          with:
-            token: ${{ secrets.CI_TOKEN }}
-            repository: ${{ 'sapfire65/web_automation_frameworck' }}
-            retain_days: 0
-            keep_minimum_runs: 6
