@@ -52,16 +52,6 @@
 #            sudo cp -R allure-report/history/* ./.github/gh-pages/history/
 
 
-        - name: Add allure information
-          working-directory: allure-results
-          if: always()
-          run: |
-            echo GIT_BRANCH=${{ github.head_ref || github.ref_name }}  >> environment.properties
-            echo GIT_COMMIT_ID=${{ github.sha }} >> environment.properties
-            echo GIT_COMMIT_MESSAGE=$(git show -s --format=%s HEAD) >> environment.properties
-            echo GIT_COMMIT_AUTHOR_NAME=$(git show -s --format='%ae' HEAD) >> environment.properties
-            echo GIT_COMMIT_TIME=$(git show -s --format=%ci HEAD) >> environment.properties
-            echo CHROME_VERSION=$(google-chrome --product-version) >> environment.properties
 
         - name: Deploy to GitHub Pages
           uses: JamesIves/github-pages-deploy-action@4.1.5
