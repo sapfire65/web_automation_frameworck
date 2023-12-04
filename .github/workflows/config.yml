@@ -66,6 +66,6 @@
           uses: Mattraks/delete-workflow-runs@v2
           with:
             token: ${{ secrets.CI_TOKEN }}
-            repository: ${{ 'sapfire65/bot_av_2' }}
+            repository: ${{ 'sapfire65/web_automation_frameworck' }}
             retain_days: 0
             keep_minimum_runs: 6
