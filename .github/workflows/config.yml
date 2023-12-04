@@ -9,6 +9,16 @@
       runs-on: ubuntu-latest
 
       steps:
+
+        - name: Delete workflow runs
+          uses: Mattraks/delete-workflow-runs@v2
+          with:
+            token: ${{ secrets.CI_TOKEN }}
+            repository: ${{ 'sapfire65/web_automation_frameworck' }}
+            retain_days: 0
+            keep_minimum_runs: 2
+
+
         - uses: actions/checkout@v4
 
         - name: Checkout (copy) gh-pages repository to GitHub runner
@@ -50,10 +60,3 @@
             clean: true
 
 
-        - name: Delete workflow runs
-          uses: Mattraks/delete-workflow-runs@v2
-          with:
-            token: ${{ secrets.CI_TOKEN }}
-            repository: ${{ 'sapfire65/web_automation_frameworck' }}
-            retain_days: 0
-            keep_minimum_runs: 4
