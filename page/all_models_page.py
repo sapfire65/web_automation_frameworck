@@ -13,7 +13,7 @@ class AllModels(Base):
 
     LOGO_BMW = ('xpath', '(//a[@class="cmp-globalnavigation__logo"])[1]')
     FIRST_AUTO_ICON = ('xpath', '(//button[@class="cmp-modelcard__button"])[1]')
-    PREVIEW_CAR = ('xpath', '//img[@class="cmp-modelselection__detail-view--image style-lazyload__loaded_"]')
+    PREVIEW_CAR = ('xpath', '//img[@class="cmp-modelselection__detail-view--image style-lazyload__loaded"]')
     SELECTOR = ('xpath', '')
 
     def __init__(self, driver: WebDriver):
