@@ -68,4 +68,4 @@
             token: ${{ secrets.CI_TOKEN }}
             repository: ${{ 'sapfire65/bot_av_2' }}
             retain_days: 0
-            keep_minimum_runs: 10
+            keep_minimum_runs: 6
