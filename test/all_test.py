@@ -37,8 +37,9 @@ class TestAll(TestAnnotations):
     @allure.title("Car preview after click")
     @allure.severity("Critical")
     @pytest.mark.smoke
-    def test_car_preview_after_click(self):
+    def test_button_preview_after_click(self):
         """Ожидаем что после коика на иконку, отображается превью модели машины"""
         self.base_functions.open(self.lincs.ALL_MODELS)
         self.base_functions.is_opened(self.lincs.ALL_MODELS)
-        self.all_models_page.car_preview_after_click()
+        self.all_models_page.read_more_button_after_click()
+

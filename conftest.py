@@ -20,7 +20,7 @@ def driver(request):
     chrome_options.add_argument("--disable-infobars")
     chrome_options.add_argument("--disable-extensions")
     chrome_options.add_argument("--homedir=/tmp")
-    # chrome_options.add_argument('log-level=3')
+    chrome_options.add_argument('log-level=3')
     chrome_options.add_argument('--incognito')
     chrome_options.add_argument('--headless')
 
