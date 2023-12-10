@@ -34,6 +34,8 @@ def driver(request):
 '''
 
 console comands to START:
-pytest --alluredir=report;  allure serve report
+pytest -sv -n 4 --alluredir=report;  allure serve report
 
+многопоточность флаг -n
 '''
+
